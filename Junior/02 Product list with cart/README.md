@@ -1,12 +1,82 @@
-# React + Vite
+# Product List with Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce product listing application with shopping cart functionality built using React and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live demo: [Product List with Cart](https://thriving-madeleine-680072.netlify.app/)
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- TailwindCSS
+- TypeScript
+- ESLint
+
+## 🏗️ Project Structure
+
+```
+├── src/          # Source files
+├── public/       # Static assets
+├── data/         # Data files
+└── dist/         # Build output
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Build for production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 🔧 Configuration
+
+The project uses Vite as the build tool and includes:
+
+- ESLint for code linting
+- TailwindCSS for styling
+- TypeScript for type safety
+
+## 📄 License
+
+This project is open source and available under the MIT License.

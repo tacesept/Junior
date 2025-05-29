@@ -7,13 +7,13 @@ import { useState, useEffect } from "react";
 export default function Cart({ cartItems, handleRemoveItem }) {
   const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
   const totalPrice = cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
-  const [orderConfirmed, setOrderConfirmed] = useState(false); 
+  const [orderConfirmed, setOrderConfirmed] = useState(false);
   function handleConfirmOrder() {
     setOrderConfirmed(true);
   }
 
   useEffect(() => {
-    if(orderConfirmed) {
+    if (orderConfirmed) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
