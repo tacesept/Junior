@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "PlusJakartaSans";
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-plus-jakarta-sans: "PlusJakartaSans", sans-serif;
+
+  --color-lime: #d8db2f;
+  --color-slate-900: #133041;
+  --color-slate-700: #4e6e7e;
+  --color-slate-500: #6b94a8;
+  --color-slate-300: #9abed5;
+  --color-slate-100: #e4f4fd;
+  --color-white: #ffffff;
+  --color-red: #d73328;
+}
+
+@layer base {
+  body {
+    @apply font-plus-jakarta-sans bg-slate-100;
+  }
+
+  label,
+  legend {
+    @apply inline-block w-fit text-slate-700 font-medium leading-[1.5];
+  }
+
+  input[type="number"] {
+    @apply [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+  }
+
+  input,
+  label,
+  button {
+    @apply cursor-pointer;
+  }
+} 
