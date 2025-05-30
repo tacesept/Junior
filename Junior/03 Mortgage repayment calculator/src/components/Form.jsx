@@ -31,9 +31,11 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
             }
             {...register("mortgageAmount", { required: true })}
             onKeyDown={(e) => {
-              if (/\D/.test(e.key)) {
+              // if it's a single character (length===1) and not a digit, block it
+              if (e.key.length === 1 && /\D/.test(e.key)) {
                 e.preventDefault();
               }
+              // otherwise (Tab, Backspace, Arrow keys…), do nothing so focus can move
             }}
             className="relative z-10 w-full py-3 pl-16 pr-4 bg-transparent text-slate-900 group-focus-within:outline-lime"
           />
@@ -66,7 +68,7 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
               }
               {...register("mortgageTerm", { required: true })}
               onKeyDown={(e) => {
-                if (/\D/.test(e.key)) {
+                if (e.key.length === 1 && /\D/.test(e.key)) {
                   e.preventDefault();
                 }
               }}
@@ -109,7 +111,7 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
                 required: true,
               })}
               onKeyDown={(e) => {
-                if (/\D/.test(e.key)) {
+                if (e.key.length === 1 && /\D/.test(e.key)) {
                   e.preventDefault();
                 }
               }}
