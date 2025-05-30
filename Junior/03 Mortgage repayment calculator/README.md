@@ -4,7 +4,7 @@ A web application that helps users calculate their mortgage repayments. Built wi
 
 ## Live Demo
 
-Check out the live demo: [Mortgage Repayment Calculator](https://app.netlify.com/projects/cute-marigold-9135c5/deploys/683967c4ebdce2edeaa3dcb8)
+Check out the live demo: [Mortgage Repayment Calculator](https://cute-marigold-9135c5.netlify.app/)
 
 ## Features
 
