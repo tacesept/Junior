@@ -10,18 +10,7 @@ Check out the live demo: [Product List with Cart](https://thriving-madeleine-680
 
 - React 19
 - Vite
-- TailwindCSS
-- TypeScript
-- ESLint
-
-## 🏗️ Project Structure
-
-```
-├── src/          # Source files
-├── public/       # Static assets
-├── data/         # Data files
-└── dist/         # Build output
-```
+- TailwindCSS  
 
 ## 🚀 Getting Started
 
@@ -66,17 +55,11 @@ yarn build
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build 
 
 ## 🔧 Configuration
 
 The project uses Vite as the build tool and includes:
-
-- ESLint for code linting
-- TailwindCSS for styling
-- TypeScript for type safety
-
-## 📄 License
-
-This project is open source and available under the MIT License.
+ 
+- TailwindCSS for styling 
+ 
