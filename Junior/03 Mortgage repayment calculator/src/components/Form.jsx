@@ -25,12 +25,25 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
           <input
             type="number"
             id="mortgage-amount"
+            aria-invalid={errors.mortgageAmount ? "true" : "false"}
+            aria-describedby={
+              errors.mortgageAmount ? "mortgage-amount-error" : undefined
+            }
             {...register("mortgageAmount", { required: true })}
+            onKeyDown={(e) => {
+              if (/\D/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
             className="relative z-10 w-full py-3 pl-16 pr-4 bg-transparent text-slate-900 group-focus-within:outline-lime"
           />
         </div>
         {errors.mortgageAmount && (
-          <p className="text-sm text-red-500 font-medium">
+          <p
+            className="text-sm text-red-500 font-medium"
+            role="alert"
+            id="mortgage-amount-error"
+          >
             This field is required
           </p>
         )}
@@ -47,7 +60,16 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
             <input
               type="number"
               id="mortgage-term"
+              aria-invalid={errors.mortgageTerm ? "true" : "false"}
+              aria-describedby={
+                errors.mortgageTerm ? "mortgage-term-error" : undefined
+              }
               {...register("mortgageTerm", { required: true })}
+              onKeyDown={(e) => {
+                if (/\D/.test(e.key)) {
+                  e.preventDefault();
+                }
+              }}
               className="relative z-10 w-full py-3 pl-4 pr-16 bg-transparent text-slate-900 group-focus-within:outline-lime"
             />
             <span
@@ -77,9 +99,20 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
               type="number"
               step="0.01"
               id="interest-rate-percentage"
+              aria-invalid={errors.interestRatePercentage ? "true" : "false"}
+              aria-describedby={
+                errors.interestRatePercentage
+                  ? "interest-rate-percentage-error"
+                  : undefined
+              }
               {...register("interestRatePercentage", {
                 required: true,
               })}
+              onKeyDown={(e) => {
+                if (/\D/.test(e.key)) {
+                  e.preventDefault();
+                }
+              }}
               className="relative z-10 w-full py-3 pl-4 pr-16 bg-transparent text-slate-900 group-focus-within:outline-lime"
             />
             <span
@@ -114,6 +147,10 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
                 id={type}
                 name="mortgage-type"
                 value={type}
+                aria-invalid={errors.mortgageType ? "true" : "false"}
+                aria-describedby={
+                  errors.mortgageType ? "mortgage-type-error" : undefined
+                }
                 className="w-5 h-5 accent-lime-700"
                 {...register("mortgageType", { required: true })}
               />
@@ -122,7 +159,11 @@ export default function Form({ register, handleSubmit, errors, onSubmit }) {
           ))}
         </div>
         {errors.mortgageType && (
-          <p className="text-sm text-red-500 font-medium">
+          <p
+            className="text-sm text-red-500 font-medium"
+            role="alert"
+            id="mortgage-type-error"
+          >
             This field is required
           </p>
         )}
