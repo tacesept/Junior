@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-blue: #172339;
+}
+
+@layer base {
+  body {
+    background: #faf8f6;
+  }
+
+  h1 {
+    @apply text-[38px] md:text-[56px] lg:text-[72px] lg:tracking-[-1px];
+  }
+
+  button {
+    @apply font-bold cursor-pointer rounded-md transition-all duration-300;
+  }
+}
+
+@layer components {
+  .gradient-bg:hover {
+    background: linear-gradient(-77deg, #ffa84e 0%, #cb30e3 51%, #a060ff 100%);
+  }
+}
